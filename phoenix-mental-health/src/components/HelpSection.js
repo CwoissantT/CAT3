@@ -5,7 +5,7 @@ const HelpSection = () => {
   return (
     <section className="flex flex-col md:flex-row items-center py-16 bg-background">
       {/* Left Side - Card */}
-      <div className="md:w-1/2 order-2 md:order-1 mt-8 md:mt-0">
+      <div className="md:w-1/2 order-2 md:order-1 mt-8 md:mt-0 px-10">
         <div className="bg-lightTurquoise rounded-lg p-8 relative shadow-lg border border-darkGreen">
           <h2 className="text-2xl font-lato font-bold text-black mb-4">Here to Help</h2>
           <p className="text-black font-dmSans">

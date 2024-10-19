@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
 
 
 body {
@@ -15,4 +18,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.instagram-embed-wrapper {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.instagram-embed-wrapper blockquote {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  transform: scale(0.8); /* Shrink to 80% */
+  transform-origin: top left;
+}
+
+.instagram-embed-wrapper iframe {
+  max-width: 100% !important;
+  width: 100% !important;
 }

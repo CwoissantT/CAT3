@@ -19,6 +19,9 @@ module.exports = {
         lato: ['Lato', 'sans-serif'],
         dmSans: ['DM Sans', 'sans-serif'],
       },
+      backgroundImage: {
+        'hero-bg': "url('/src/images/BackgroundHero.png')",
+      }
     },
   },
   plugins: [],
