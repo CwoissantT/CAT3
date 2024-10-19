@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 const Home = () => {
   return (
     <div className="font-sans bg-lightTeal text-deepTeal">
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       <MissionSection />
       <QuoteSection />

@@ -1,5 +1,7 @@
 import React from 'react';
 import PhoenixLogo from '../images/Phoenix-Nav-Logo.png';
+// import {Services} from '../pages/Services';
+import { Link } from 'react-router-dom';
 import { FaGlobe, FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -9,7 +11,9 @@ const Navbar = () => {
       <div className="flex items-center space-x-4">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img src={PhoenixLogo} alt="Phoenix Logo" className="h-20 w-auto" />
+          <Link to="/">
+            <img src={PhoenixLogo} alt="Phoenix Logo" className="h-20 w-auto" />
+          </Link>
         </div>
         {/* English Button */}
         <button className="flex items-center border border-darkGreen text-darkGreen px-3 py-1 rounded-full text-sm font-openSans uppercase font-lato hover:bg-darkGreen hover:text-white transition duration-300">
@@ -20,15 +24,15 @@ const Navbar = () => {
       {/* Right Side */}
       <div className="flex items-center space-x-6 ml-auto font-lato">
         {/* Navigation Links */}
-        <a href="#" className="text-darkGreen hover:text-turquoise text-sm uppercase">
+        <Link to='/Services' className="text-darkGreen hover:text-turquoise text-sm uppercase">
           Services
-        </a>
-        <a href="#" className="text-darkGreen hover:text-turquoise text-sm uppercase">
+        </Link>
+        <Link to="/About" className="text-darkGreen hover:text-turquoise text-sm uppercase">
           About
-        </a>
-        <a href="#" className="text-darkGreen hover:text-turquoise text-sm uppercase">
+        </Link>
+        <Link to="/Contact" className="text-darkGreen hover:text-turquoise text-sm uppercase">
           Contact
-        </a>
+        </Link>
         {/* Request Appointment Button */}
         <button className="bg-darkGreen text-white px-4 py-2 rounded-lg text-sm font-bold uppercase hover:bg-darkGreenHover transition duration-300">
           Request Appointment
