@@ -14,6 +14,7 @@ module.exports = {
         highlight: '#F4FADD',       // Highlight
         background: '#EAF1EF',      // Background
         black: '#000000',           // Black for text
+        teal700: '#4B9E85',         // Teal 700
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],

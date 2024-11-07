@@ -16,14 +16,6 @@ const ServiceCard = ({ title, content, alignRight = false }) => {
           </p>
         </div>
       </div>
-      {/* Optional Feather Icon */}
-      {/* <div className="hidden md:block md:w-1/2 flex justify-center">
-        <img
-          src="PATH_TO_YOUR_FEATHER_ICON" // Replace with actual path
-          alt="Feather Icon"
-          className="w-12 h-12"
-        />
-      </div> */}
     </section>
   );
 };
