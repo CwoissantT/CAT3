@@ -93,7 +93,7 @@ const Services = () => {
         {/* Additional Sections */}
         {/* You can add more content like therapy options and meeting options here */}
 
-        <h1 className="text-4xl font-lato font-bold text-center py-16">Services</h1>
+        {/* <h1 className="text-4xl font-lato font-bold text-center py-16">Services</h1> */}
 
         {/* Therapy Options */}
         <TherapyOptions />
