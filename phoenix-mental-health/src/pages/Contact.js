@@ -1,6 +1,8 @@
 import React from 'react';
 import Footer from '../components/Footer'; // already coded
 import ContactSection from '../components/ContactSection'; // new component
+// import { Calendar } from 'react-big-calendar';
+import MyCalendar from '../components/Calendar';
 
 const Contact = () => {
   return (

@@ -1,20 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import necessary components
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import Home from './pages/Home';
-import Services from './pages/Services';  // Import your Services component
-import About from './pages/About';        // Import your About component
-import Contact from './pages/Contact';    // Import your Contact component
-import Navbar from './components/Navbar'; // Import your Navbar component
+import Services from './pages/Services';  
+import About from './pages/About';        
+import Contact from './pages/Contact';   
+import Navbar from './components/Navbar'; 
 
 function App() {
   return (
     <Router>
-      <Navbar />  {/* Place Navbar inside Router so Link components work */}
+      <Navbar /> 
       <Routes>
-        <Route path="/" element={<Home />} />           {/* Define Home route */}
-        <Route path="/Services" element={<Services />} />  {/* Define Services route */}
-        <Route path="/About" element={<About />} />     Define About route
-        <Route path="/Contact" element={<Contact />} /> Define Contact route
+        <Route path="/" element={<Home />} />           
+        <Route path="/Services" element={<Services />} />  
+        <Route path="/About" element={<About />} /> 
+        <Route path="/Contact" element={<Contact />} /> 
       </Routes>
     </Router>
   );
