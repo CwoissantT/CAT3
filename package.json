@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "dev": "concurrently \"npm run server\" \"npm run phoenix-mental-health\"",
+        "server": "node server/server.js",
+        "phoenix-mental-health": "cd phoenix-mental-health && npm start"
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.0"
+    },
+    "dependencies": {
+        "sequelize": "^6.37.5"
+    }
+}
