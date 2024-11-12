@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
   const [email, setEmail] = useState('');
@@ -7,6 +8,27 @@ function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState(''); // State for error message
+
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkSession = async () => {
+      try {
+        const response = await fetch('/api/user/session');
+        const data = await response.json();
+        
+        // If the user is already logged in, redirect to home
+        if (data.logged_in) {
+          navigate('/');
+        }
+      } catch (error) {
+        console.error('Error checking session:', error);
+      }
+    };
+
+    checkSession();
+  }, [navigate]);
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -43,7 +65,7 @@ function RegisterPage() {
       setPassword('');
       setConfirmPassword('');
       setErrorMessage('');
-      // Optionally, redirect to login page or show a success message
+      navigate('/'); 
     } catch (error) {
       console.error('Error during registration:', error);
       setErrorMessage(error.message); // Set the error message to display
@@ -131,7 +153,7 @@ function RegisterPage() {
 
           <p className="text-sm text-center text-gray-600">
             Already have an Account?{' '}
-            <a href="#" className="font-medium text-green-600 hover:underline">
+            <a href="/Login" className="font-medium text-green-600 hover:underline">
               Click here to log in
             </a>
           </p>

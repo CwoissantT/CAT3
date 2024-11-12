@@ -71,17 +71,30 @@ router.post('/login', async (req, res) => {
 });
 
 // Get session information
-router.get('/session', (req, res) => {
+router.get('/session', async (req, res) => {
   console.log('/session');
   if (req.session.logged_in) {
-    res.json({
-      logged_in: req.session.logged_in,
-      user_id: req.session.user_id, // Added user ID to session response for reference if needed
-    });
+    try {
+      const user = await User.findByPk(req.session.user_id, {
+        attributes: ['email'] 
+      });
+      if (!user) {
+        return res.json({ logged_in: false });
+      }
+      
+      res.json({
+        logged_in: true,
+        email: user.email, 
+      });
+    } catch (error) {
+      console.error('Failed to retrieve session user:', error);
+      res.status(500).json({ message: 'Failed to retrieve session information.' });
+    }
   } else {
     res.json({ logged_in: false });
   }
 });
+
 
 // Logout user
 router.post('/logout', (req, res) => {

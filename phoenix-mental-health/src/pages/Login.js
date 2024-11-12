@@ -1,10 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function LoginPage({ onLoginSuccess, onSignupOpen }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkSession = async () => {
+      try {
+        const response = await fetch('/api/user/session');
+        const data = await response.json();
+        
+        // If the user is already logged in, redirect to home
+        if (data.logged_in) {
+          navigate('/');
+        }
+      } catch (error) {
+        console.error('Error checking session:', error);
+      }
+    };
+
+    checkSession();
+  }, [navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -26,7 +47,7 @@ function LoginPage({ onLoginSuccess, onSignupOpen }) {
       setEmail('');
       setPassword('');
       setErrorMessage('');
-      onLoginSuccess(email);
+      navigate('/');
     } catch (error) {
       setErrorMessage('An unexpected error occurred. Please try again.');
     }
@@ -101,7 +122,7 @@ function LoginPage({ onLoginSuccess, onSignupOpen }) {
           <p className="text-sm text-center text-gray-600">
             Don’t have an Account?{' '}
             <a
-              href="#"
+              href="/Register"
               onClick={onSignupOpen}
               className="font-medium text-green-600 hover:underline"
             >
