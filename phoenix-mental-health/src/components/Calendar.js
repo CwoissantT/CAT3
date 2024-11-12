@@ -1,4 +1,3 @@
-// src/components/Calendar/Calendar.js
 import React, { useState } from 'react';
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
 import { format, parse, startOfWeek, getDay } from 'date-fns';
@@ -20,15 +19,15 @@ const locales = {
   });
   
 
-const MyCalendar = () => {
-  const [events, setEvents] = useState([
-    // Sample event
-    {
-      title: 'Sample Event',
-      start: new Date(),
-      end: new Date(),
-    },
-  ]);
+const MyCalendar = ({ openTimes }) => {
+  // Transform openTimes into events compatible with the Calendar component
+  const events = openTimes.map((appt) => ({
+    id: appt.id,
+    title: 'Available',
+    start: new Date(appt.date),
+    end: new Date(appt.date), // If you have a duration, adjust the end time accordingly
+    allDay: false, // or true if the appointment spans the whole day
+  }));
 
   return (
     <div className="p-4">
@@ -38,6 +37,8 @@ const MyCalendar = () => {
         startAccessor="start"
         endAccessor="end"
         style={{ height: 500 }}
+        selectable
+        onSelectEvent={(event) => alert(`Selected event: ${event.title} at ${event.start}`)}
       />
     </div>
   );

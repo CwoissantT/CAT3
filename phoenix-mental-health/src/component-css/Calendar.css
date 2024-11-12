@@ -1,29 +1,16 @@
-/* src/components/Calendar/Calendar.css
-
-.rbc-toolbar {
-  @apply flex items-center justify-between mb-4;
-}
-
-.rbc-toolbar-label {
-  @apply text-xl font-semibold text-gray-800;
-}
-
-.rbc-btn-group button {
-  @apply px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600;
+.rbc-calendar {
+  background-color: #F5F8F7; /* Light background color */
 }
 
 .rbc-event {
-  @apply bg-green-500 text-white rounded-lg px-2 py-1;
+  background-color: #0E4823; /* Dark green for events */
+  color: white;
+}
+
+.rbc-toolbar button {
+  color: #0E4823; /* Dark green for toolbar */
 }
 
 .rbc-day-bg {
-  @apply border border-gray-200;
-} */
-/* 
-.rbc-today {
-  @apply bg-green-200;
-} */
-
-/* .rbc-off-range-bg {
-  @apply bg-gray-100;
-} */
+  background-color: #E7ECE9; /* Light gray for day backgrounds */
+}

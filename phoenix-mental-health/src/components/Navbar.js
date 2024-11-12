@@ -59,9 +59,9 @@ const Navbar = () => {
           Contact
         </Link>
         {/* Request Appointment Button */}
-        <button className="bg-darkGreen text-white px-4 py-2 rounded-lg text-sm font-bold uppercase hover:bg-darkGreenHover transition duration-300">
+        <Link to="/Portal" className="bg-darkGreen text-white px-4 py-2 rounded-lg text-sm font-bold uppercase hover:bg-darkGreenHover transition duration-300">
           Request Appointment
-        </button>
+        </Link>
 
 
         {session?.logged_in ? (
