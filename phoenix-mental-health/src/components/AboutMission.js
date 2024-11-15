@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AboutMission = () => {
   return (
@@ -19,9 +20,11 @@ const AboutMission = () => {
           <p className="text-black font-dmSans text-lg mb-8">
             Take charge of your life and schedule your first appointment.
           </p>
-          <button className="bg-green-800 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-green-700 transition">
-            REQUEST FREE CONSULTATION
-          </button>
+          <Link to="/Portal">
+            <button className="bg-green-800 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-green-700 transition">
+              REQUEST FREE CONSULTATION
+            </button>
+          </Link>
         </div>
       </div>
     </section>

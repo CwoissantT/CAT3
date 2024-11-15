@@ -10,7 +10,7 @@ const HelpSection = () => {
       paragraphText="A variety of services designed to address the different emotional and mental needs of my clients. Whether you need short-term support to overcome a specific challenge, or long-term therapy to work on deeper issues, I am here to help."
       />
       {/* Right Side - Image */}
-      <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
+      <div className="md:w-1/2 order-1 md:order-2 flex justify-center py-10">
         <img src={FamilyHouse} alt="Family in house" className="w-80 h-80" />
       </div>
     </section>
