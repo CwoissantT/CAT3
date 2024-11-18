@@ -9,7 +9,7 @@ const Contact = () => {
     <div className="font-sans bg-lightTeal text-deepTeal min-h-screen flex flex-col">
       {/* Main Section */}
       {/* REMOVE py-1 just helping me see seperation */}
-      <div className="flex-grow py-1">
+      <div className="flex-grow bg-background">
         <ContactSection />
       </div>
       

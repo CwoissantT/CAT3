@@ -16,6 +16,9 @@ module.exports = {
         black: '#000000',           // Black for text
         teal700: '#4B9E85',         // Teal 700
       },
+      height: {
+        '15/6': '140%', // 15/6 is equivalent to 250%
+      },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
         dmSans: ['DM Sans', 'sans-serif'],
