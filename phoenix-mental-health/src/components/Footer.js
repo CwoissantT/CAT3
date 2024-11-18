@@ -6,7 +6,7 @@ import FbSVG from '../images/Facebook.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-background py-8">
+    <footer className="bg-background py-8 shadow-top">
       <div className="container mx-auto px-4 md:px-8 lg:px-16 flex flex-col md:flex-row justify-between text-left space-y-8 md:space-y-0">
         
         {/* Map Section */}

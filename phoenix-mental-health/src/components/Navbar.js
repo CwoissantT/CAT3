@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-background md:flex md:items-center md:justify-center px-8 py-2 space-x-8">
+    <nav className="bg-background md:flex md:items-center md:justify-center px-8 py-2 space-x-8 shadow-lg">
       {/* Navbar container */}
       <div className="flex items-center justify-between">
         {/* Logo */}
@@ -80,7 +80,7 @@ const Navbar = () => {
                 onClick={handleSignOut}
                 className="flex items-center border border-darkGreen text-darkGreen px-3 py-1 rounded-full text-sm uppercase hover:bg-darkGreen hover:text-white transition duration-300"
               >
-                Sign Out
+                Logout
               </button>
             </div>
           ) : (
@@ -124,7 +124,7 @@ const Navbar = () => {
                 onClick={handleSignOut}
                 className="flex items-center border border-darkGreen text-darkGreen px-3 py-1 rounded-full text-sm uppercase hover:bg-darkGreen hover:text-white transition duration-300 mt-2"
               >
-                Sign Out
+                Logout
               </button>
             </div>
           ) : (
