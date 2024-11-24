@@ -303,10 +303,22 @@ router.get('/admin/all-appointments', isAdmin, async (req, res) => {
           [Op.gte]: today,
         },
       },
+      include: [
+        {
+          model: User, 
+          attributes: ['email'], 
+        },
+      ],
       order: [['date', 'ASC']],
     });
 
-    const appointments = appointmentsData.map((appt) => appt.get({ plain: true }));
+    const appointments = appointmentsData.map((appt) => {
+      const plainAppt = appt.get({ plain: true });
+      return {
+        ...plainAppt,
+        userEmail: plainAppt.User?.email, 
+      };
+    });
 
     res.json(appointments);
   } catch (err) {
