@@ -11,7 +11,7 @@ const AdminCalendar = ({ appointments }) => {
   const events = appointments.map((appt) => ({
     id: appt.id,
     email: appt.user.email,
-    title: `Appointment with User ID: ${appt.user.email}`,
+    title: `Appointment with User: ${appt.user.email}`,
     start: new Date(appt.date),
     end: new Date(new Date(appt.date).getTime() + 60 * 60 * 1000), // Assuming 1 hour duration
     allDay: false,
