@@ -5,15 +5,15 @@ console.log('DB_NAME:', process.env.DB_NAME); // Log to check if values are load
 
 // Create a connection object
 const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
+  "phoenix_bmxq",
+  "phoenix",
   process.env.DB_PASSWORD,
   {
     // Database location
-    host: 'localhost',
+    host: 'dpg-ct1r0v1opnds73fmorfg-a',
     dialect: 'postgres',
     logging: console.log,
-    port: process.env.DB_PORT
+    port: 5432
   },
 );
 
