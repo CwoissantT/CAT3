@@ -302,7 +302,7 @@ const AdminPortal = () => {
                 {userAppointments.length > 0 ? (
                 userAppointments.map((appt) => (
                     <option key={appt.id} value={appt.id}>
-                    {`Appointment ID: ${appt.id}, User ID: ${appt.user_id}, Date: ${new Date(appt.date).toLocaleString()}`}
+                    {`Appointment ID: ${appt.id}, User email: ${appt.user.email}, Date: ${new Date(appt.date).toLocaleString()}`}
                     </option>
                 ))
                 ) : (
