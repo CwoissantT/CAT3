@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import MyCalendar from '../components/Calendar';
 import { FaUser } from 'react-icons/fa';
 
 const UserPortal = () => {
   const [user, setUser] = useState(null);
+  const [role, setRole] = useState(null);
   const [openTimes, setOpenTimes] = useState([]);
   const [isRequestingAppointment, setIsRequestingAppointment] = useState(false);
   const [isCancellingAppointment, setIsCancellingAppointment] = useState(false);
@@ -12,6 +13,7 @@ const UserPortal = () => {
   const [userAppointments, setUserAppointments] = useState([]);
   const [selectedUserAppointmentId, setSelectedUserAppointmentId] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
 
   // Check if user is logged in when component mounts
   useEffect(() => {
@@ -24,6 +26,7 @@ const UserPortal = () => {
           navigate('/'); // Redirect to home if not logged in
         } else {
           setUser(data.email);
+          setRole(data.role);
         }
       } catch (error) {
         console.error('Failed to check session:', error);
@@ -33,7 +36,13 @@ const UserPortal = () => {
 
     checkSession();
     fetchOpenTimes();
-  }, [navigate]);
+  }, [navigate, location]);
+
+  useEffect(() => {
+    if (role === 2) {
+      navigate('/AdminPortal'); // Redirect to admin portal
+    }
+  }, [role, navigate]);
 
 
   // Fetch available open times for appointments

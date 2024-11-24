@@ -42,6 +42,7 @@ function App() {
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/Register" element={<RegisterPage />} />
         <Route path="/Portal" element={role === 2 ? <AdminPortal /> : <UserPortal />} />
+        <Route path="/AdminPortal" element={<AdminPortal/>} />
       </Routes>
     </Router>
   );
