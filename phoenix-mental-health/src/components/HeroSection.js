@@ -27,7 +27,7 @@ const HeroSection = () => {
           <svg
             className="w-8 h-8 animate-bounce"
             fill="none"
-            stroke="currentColor"
+            stroke="white"
             viewBox="0 0 24 24"
           >
             <path d="M19 9l-7 7-7-7" />
