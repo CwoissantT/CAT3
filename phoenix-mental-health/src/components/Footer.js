@@ -7,39 +7,39 @@ import FbSVG from '../images/Facebook.svg';
 const Footer = () => {
   return (
     <footer className="bg-background py-8 shadow-top">
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 flex flex-col md:flex-row justify-between text-left space-y-8 md:space-y-0">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 flex flex-col md:flex-row justify-center text-left space-y-8 md:space-y-0">
         
-        {/* Map Section */}
+        {/* Map Section
         <div className="w-full md:w-1/4 flex justify-center md:justify-start mb-8 md:mb-0 md:mr-10">
           <img
             src={FooterMap} 
             alt="Map location"
             className="border border-darkGreen rounded-md"
           />
-        </div>
+        </div> */}
 
         {/* Quick Links Section */}
-        <div className="w-full md:w-1/4">
+        <div className="w-full md:w-1/4 mr-20">
           <h2 className="text-black font-bold mb-4">Quick Links</h2>
           <ul className="text-green-800 font-dmSans space-y-2">
             <Link to="/"><li>Home</li></Link>
             <Link to="/Services"><li>Services</li></Link>
             <Link to="/About"><li>About</li></Link>
             <Link to="/Contact"><li>Contact</li></Link>
-            <Link to="/"><li>Request Appointment</li></Link>
+            <Link to="/Portal"><li>Request Appointment</li></Link>
           </ul>
         </div>
 
         {/* Contact Section */}
-        <div className="w-full md:w-1/4 mr-10">
+        <div className="w-full md:w-1/4 mr">
           <h2 className="text-black font-bold mb-4">Contact</h2>
-          <p className="text-green-800 font-dmSans">1234 East Orchard Road</p>
-          <p className="text-green-800 font-dmSans">Greenyard Village, FL 12345</p>
-          <p className="text-black font-dmSans mt-4">(xxx) xxx-xxxx</p>
-          <p className="text-black font-dmSans">abc@gmail.com</p>
+          <p className="text-black font-dmSans">Miami, FL</p>
+          <p className="text-black font-dmSans"></p>
+          <p className="text-black font-dmSans mt-4">(786) 613-9498</p>
+          <p className="text-black font-dmSans">phoenixplusllc@icloud.com</p>
         </div>
 
-        {/* Follow Section */}
+        {/* Follow Section
         <div className="w-full md:w-1/4">
           <h2 className="text-black font-bold mb-4">Follow</h2>
           <ul className="text-green-800 font-dmSans space-y-4">
@@ -52,7 +52,7 @@ const Footer = () => {
               <span>Facebook</span>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
 
       {/* Footer Bottom Text */}

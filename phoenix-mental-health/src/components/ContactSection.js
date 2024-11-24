@@ -11,15 +11,14 @@ const ContactSection = () => {
         <div className="absolute top-3 left-10 bg-teal-700 rounded-lg w-[86.5%] h-[100%] z-0"></div>
 
 
-        <div className="relative bg-lightTurquoise rounded-lg p-8 pr-20 shadow-lg border border-darkGreen z-10">
+        <div className="relative bg-lightTurquoise rounded-lg p-8 pr-20 w-[102.5%] h-[100%] shadow-lg border border-darkGreen z-10">
           <h2 className="text-2xl font-lato font-bold text-black mb-4">Contact</h2>
           <p className="text-black font-dmSans">
-              1234 East Orchard Road<br />
-              Greenyard Village, FL 12345
+              Miami, FL <br />
             </p>
             <p className="text-black font-dmSans my-4">
-              (xxx) xxx-xxxx<br />
-              abc@gmail.com
+              (786) 613-9498<br />
+              phoenixplusllc@icloud.com
             </p>
 
 

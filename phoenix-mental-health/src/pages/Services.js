@@ -43,7 +43,7 @@ const Services = () => {
               <img
                 src={Depression}
                 alt="Depression"
-                className="w-[250px] h-[300px] object-cover rounded-lg"
+                className="w-[250px] h-[300px] object-contain rounded-lg"
               />
             </div>
           </div>
@@ -56,7 +56,7 @@ const Services = () => {
               <img
                 src={Bipolar}
                 alt="Bipolar"
-                className="w-[300px] h-[300px] object-cover rounded-lg"
+                className="w-[250px] h-[300px] object-contain rounded-lg"
               />
             </div>
           </div>
@@ -64,7 +64,7 @@ const Services = () => {
           <div className="relative z-10 w-full md:w-1/2">
             <RightCard
               headerText="Bipolar"
-              paragraphText="Bipolar disorder is a mental illness that causes extreme mood swings, shifts in energy, and changes in activity levels."
+              paragraphText="Bipolar disorder is a mental illness that causes extreme mood swings, shifts in energy, and changes in activity levels."
             />
           </div>
         </section>
@@ -88,7 +88,7 @@ const Services = () => {
               <img
                 src={Anxiety}
                 alt="Anxiety"
-                className="w-[250px] h-[300px] object-cover rounded-lg"
+                className="w-[250px] h-[300px] object-contain rounded-lg"
               />
             </div>
           </div>
@@ -101,7 +101,7 @@ const Services = () => {
               <img
                 src={Anger}
                 alt="Anger"
-                className="w-[300px] h-[550px] object-cover rounded-lg"
+                className="w-[250px] h-[300px] object-contain rounded-lg"
               />
             </div>
           </div>
@@ -129,7 +129,7 @@ const Services = () => {
           <div className="relative z-10 w-full md:w-1/2">
             <LeftCard
               headerText="Personality Disorders"
-              paragraphText="A personality disorder is a mental health condition that involves a long-term pattern of thoughts and behaviors that are different from what is considered normal in a person's culture."
+              paragraphText="A personality disorder is a mental health condition that involves a long-term pattern of thoughts and behaviors that are different from what is considered normal in a person's culture."
             />
           </div>
 
@@ -139,7 +139,7 @@ const Services = () => {
               <img
                 src={Personality}
                 alt="Personality Disorders"
-                className="w-[350px] h-[300px] object-cover rounded-lg"
+                className="w-[250px] h-[300px] object-contain rounded-lg"
               />
             </div>
           </div>
@@ -152,7 +152,7 @@ const Services = () => {
               <img
                 src={PTSD}
                 alt="PTSD"
-                className="w-[400px] h-[300px] object-cover rounded-lg"
+                className="w-[250px] h-[300px] object-contain rounded-lg"
               />
             </div>
           </div>
@@ -179,7 +179,7 @@ const Services = () => {
               <img
                 src={SelfStem}
                 alt="Self-Stem"
-                className="w-[350px] h-[300px] object-cover rounded-lg"
+                className="w-[250px] h-[300px] object-contain rounded-lg"
               />
             </div>
           </div>
@@ -190,10 +190,6 @@ const Services = () => {
         
         
 
-        
-
-        {/* Additional Sections */}
-        {/* You can add more content like therapy options and meeting options here */}
 
         {/* <h1 className="text-4xl font-lato font-bold text-center py-16">Services</h1> */}
 

@@ -15,7 +15,7 @@ const Home = () => {
       <MissionSection />
       <QuoteSection />
       <HelpSection />
-      <ConnectSection />
+      {/* <ConnectSection /> */}
       <Footer />
     </div>
   );

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import PhoenixLogo from '../images/Phoenix-Nav-Logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaGlobe, FaUser, FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [session, setSession] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchSession = async () => {
@@ -19,7 +20,7 @@ const Navbar = () => {
     };
 
     fetchSession();
-  }, []);
+  }, [location.pathname]);
 
   const handleSignOut = async () => {
     try {

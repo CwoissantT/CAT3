@@ -145,9 +145,9 @@ router.get('/open-times/:startDate', async (req, res) => {
       return res.status(400).json({ message: 'Invalid start date format. Please use YYYY-MM-DD.' });
     }
 
-    // Calculate the end date (7 days after the start date)
+    // Calculate the end date (4 weeks after the start date)
     const endDate = new Date(startDate);
-    endDate.setDate(endDate.getDate() + 7);
+    endDate.setDate(endDate.getDate() + 28);
     endDate.setHours(23, 59, 59, 999); // Include the entire day
 
     // Fetch open appointments within the date range
@@ -256,11 +256,17 @@ router.post('/cancel-appointment', async (req, res) => {
       return res.status(400).json({ message: 'No appointment ID provided' });
     }
 
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
     // Get the appointment from user_appts
     const userAppointment = await User_Appts.findOne({
       where: {
         id: appointmentId,
         user_id: userId,
+        date: {
+          [Op.gte]: today,
+        },
       },
     });
 
@@ -318,8 +324,18 @@ router.post('/admin/cancel-user-appointment', isAdmin, async (req, res) => {
       return res.status(400).json({ message: 'No appointment ID provided' });
     }
 
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
     // Get the appointment from user_appts
-    const userAppointment = await User_Appts.findByPk(appointmentId);
+    const userAppointment = await User_Appts.findOne({
+      where: {
+        id: appointmentId,
+        date: {
+          [Op.gte]: today,
+        },
+      },
+    });
 
     if (!userAppointment) {
       return res.status(404).json({ message: 'Appointment not found' });
@@ -346,8 +362,16 @@ router.post('/admin/cancel-user-appointment', isAdmin, async (req, res) => {
 // Get open appointments
 router.get('/admin/open-appointments', isAdmin, async (req, res) => {
   try {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
     const openAppointmentsData = await Open_Appts.findAll({
       order: [['date', 'ASC']],
+      where: {
+        date: {
+          [Op.gte]: today,
+        },
+      },
     });
 
     const openAppointments = openAppointmentsData.map((appt) => appt.get({ plain: true }));
@@ -404,8 +428,18 @@ router.post('/admin/delete-appointment-hour', isAdmin, async (req, res) => {
       return res.status(400).json({ message: 'No appointment ID provided' });
     }
 
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
     // Get the appointment from open_appts
-    const openAppointment = await Open_Appts.findByPk(appointmentId);
+    const openAppointment = await Open_Appts.findOne({
+      where: {
+        id: appointmentId,
+        date: {
+          [Op.gte]: today, 
+        },
+      },
+    });
 
     if (!openAppointment) {
       return res.status(404).json({ message: 'Open appointment not found' });

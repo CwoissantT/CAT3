@@ -282,7 +282,7 @@ const AdminPortal = () => {
             </select>
             <button
             onClick={handleDeleteAppointmentHour}
-            className="w-full bg-red-600 text-white py-2 rounded-full font-semibold uppercase hover:bg-red-700"
+            className="w-full bg-darkGreen text-white py-2 rounded-full font-semibold uppercase hover:bg-red-700"
             >
             Delete Appointment Hour
             </button>
@@ -311,7 +311,7 @@ const AdminPortal = () => {
             </select>
             <button
                 onClick={handleCancelAppointment}
-                className="w-full bg-red-600 text-white py-2 rounded-full font-semibold uppercase hover:bg-red-700"
+                className="w-full bg-darkGreen text-white py-2 rounded-full font-semibold uppercase hover:bg-red-700"
             >
                 Cancel Appointment
             </button>

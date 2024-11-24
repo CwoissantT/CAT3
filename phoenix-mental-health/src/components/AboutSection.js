@@ -49,15 +49,15 @@ const AboutSection = () => {
 
 
 
-      {/* Phoenix Image */}
+      {/* Phoenix Image
       {/* absolute bottom-0 left-0 */}
-      <div className="">
+      {/* <div className="">
         <img
           src={PhoenixEagle}
           alt="Phoenix"
           className="w-40 h-40 md:w-48 md:h-48 " // adjust the size as needed
         />
-      </div>
+      </div> */} 
     </section>
   );
 };
