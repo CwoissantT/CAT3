@@ -3,7 +3,7 @@ import FeatherIcon from '../images/feather-bottom.png';
 
 const ContactSection = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center py-16 bg-background justify-end">
+    <section className="flex flex-col md:flex-row items-center py-[10%] bg-background justify-center">
       {/* Contact Information Card */}
       <div className="w-full md:w-1/2 flex justify-center">
         <div className="relative mx-auto mt-8 md:mt-0 px-10 max-w-lg">

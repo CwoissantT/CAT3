@@ -32,7 +32,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-background md:flex md:items-center md:justify-center px-8 py-2 space-x-8 shadow-lg">
+    <nav className="bg-background md:flex md:items-center md:justify-center px-8 py-2 space-x-8 shadow-lg relative z-50">
       {/* Navbar container */}
       <div className="flex items-center justify-between">
         {/* Logo */}
@@ -51,12 +51,12 @@ const Navbar = () => {
         </button>
 
         {/* Regular Menu - Hidden on Mobile */}
-        <div className="hidden md:flex items-center space-x-8 font-lato">
+        <div className="hidden md:flex items-center space-x-8 font-lato ml-12">
           {/* English Button */}
-          <button className="flex items-center border border-darkGreen text-darkGreen px-3 py-1 rounded-full text-sm uppercase hover:bg-darkGreen hover:text-white transition duration-300">
+          {/* <div className="flex items-center border border-darkGreen text-darkGreen px-3 py-1 rounded-full text-sm uppercase transition duration-300">
             <FaGlobe className="h-4 w-4 mr-2" />
             English
-          </button>
+          </div> */}
           
           {/* Navigation Links */}
           <Link to='/Services' className="text-darkGreen hover:text-turquoise text-sm uppercase">
