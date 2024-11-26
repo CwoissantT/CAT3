@@ -23,7 +23,6 @@ const HeroSection = () => {
       </div>
       {/* Scroll Down Icon */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-        <button>
           <svg
             className="w-8 h-8 animate-bounce"
             fill="none"
@@ -32,7 +31,6 @@ const HeroSection = () => {
           >
             <path d="M19 9l-7 7-7-7" />
           </svg>
-        </button>
       </div>
     </section>
   );

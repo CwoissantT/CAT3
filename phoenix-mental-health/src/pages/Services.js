@@ -168,7 +168,7 @@ const Services = () => {
         <section className="relative flex flex-col md:flex-row items-center justify-between py-8 px-4 bg-background ">
           <div className="relative z-10 w-full md:w-1/2">
             <LeftCard
-              headerText="Self-Stem"
+              headerText="Self-Esteem"
               paragraphText="Low self-esteem is a lack of confidence in one's abilities and self-worth, and it's not a mental health disorder in itself. However, low self-esteem can be a sign of a mental health problem if it persists or affects daily life."
             />
           </div>
